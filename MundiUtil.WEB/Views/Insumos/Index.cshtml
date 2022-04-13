@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a type="submit-sucesss" asp-action="Create">Registrar Nuevo Insumo</a>
+    <a class="btn btn-outline-success" asp-action="Create">Registrar Insumo</a>
 </p>
 
 
@@ -45,7 +45,7 @@
                 @Html.DisplayFor(modelItem => item.TipoInsumo)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.IdInsumos"><i class="fas fa-info-circle" type="submit-sucess"></i></a> 
+                <a asp-action="Details" asp-route-id="@item.IdInsumos"><i class="fas fa-info-circle"></i></a> 
             </td>
         </tr>
 }
