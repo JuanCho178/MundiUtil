@@ -39,6 +39,6 @@
     <form method="post" asp-action="Eliminar" asp-route-id="@Model.IdInsumos">  
         <input type="hidden" asp-for="IdInsumos" />
         <button type="submit" class="text-danger m1-1" onclick="return confirm ('Deseas eliminar este registro?')"><i class="fa fa-trash-alt fa-lg"></i>Eliminar</button> 
-        <a type="submit-danger" asp-action="Index"><i class="fas fa-undo-alt"></i></a>
+        <a class="btn btn-danger m1-1" asp-action="Index">Regresar</a>
     </form>
 </div>
