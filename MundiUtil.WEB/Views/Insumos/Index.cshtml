@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MundiUtil.WEB.Dtos.InsumoDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a type="submit-sucesss" asp-action="Create">Registrar Nuevo Insumo</a>
+</p>
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenciaInsumo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoInsumo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenciaInsumo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoInsumo)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdInsumos"><i class="fas fa-info-circle" type="submit-sucess"></i></a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
