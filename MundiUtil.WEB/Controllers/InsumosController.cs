@@ -154,14 +154,14 @@ namespace MundiUtil.WEB.Controllers
         //        return NotFound();
         //    }
 
-        //    var insumo = await _insumoBusiness.insumo
+        //    var insumo = await _insumoBusiness.EliminarInsumo(guardarInsumoDto);
         //    .FirstOrDefaultAsync(m => m.IdInsumos =6.= id);
         //    if (insumo == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    return View(insumo);
+        //    return View(guardarInsumoDto);
         //}
 
         //// POST: Insumos/Delete/5
