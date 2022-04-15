@@ -4,10 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalle</h1>
+<h1>Detalle del Insumo</h1>
 
 <div>
-    <h4>Insumo</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -35,10 +34,12 @@
             @Html.DisplayFor(model => model.TipoInsumo)
         </dd>
     </dl>
+    <div class="row">
+         <a asp-action="Edit" asp-route-id="@Model.IdInsumos" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>  |
+        <form method="post" asp-action="Delete" asp-route-id="@Model.IdInsumos">  
+            <button type="submit" class="btn btn-danger m1-1" onclick="return confirm ('Deseas eliminar este registro?')"><i class="fa fa-trash-alt fa-lg"></i></button> |
+            <a type="submit" asp-action="Index" class="btn btn-success">Regresar</a>
+        </form>
+    </div>
 </div>
-<div>
 
-    <a asp-action="Edit" asp-route-id="@Model.IdInsumos"><i class="fas fa-pen-square"></i></a> |   
-    <a asp-action="Delete" asp-route-id="@Model.IdInsumos"><i class="fas fa-trash"></i></a>
-    <a class="btn btn-success m1-1" asp-action="Index">Regresar</a>
-</div>
