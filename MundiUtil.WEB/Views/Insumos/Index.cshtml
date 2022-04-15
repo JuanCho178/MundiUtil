@@ -4,11 +4,8 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Listado de Insumos</h1>
 
-<p>
-    <a class="btn btn-outline-success" asp-action="Create">Registrar Insumo</a>
-</p>
 
 
 <table class="table table-striped table-hover">
@@ -26,7 +23,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.TipoInsumo)
             </th>
-            <th></th>
+            <th>
+                <a asp-action="Create" class="btn btn-success">Registrar Insumo +</a>
+            </th>
         </tr>
     </thead>
     <tbody>
