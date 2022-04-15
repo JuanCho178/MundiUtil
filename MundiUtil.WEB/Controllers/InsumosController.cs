@@ -129,7 +129,10 @@ namespace MundiUtil.WEB.Controllers
                 {
                     var insumo = await _insumoBusiness.ObtenerInsumosPorId(id.Value);
                     if (insumo == null)
+                    {
                         return RedirectToAction("Index");
+                    }
+
                     return View(insumo);
                 }
                 catch (Exception)
@@ -141,33 +144,10 @@ namespace MundiUtil.WEB.Controllers
             return RedirectToAction("Index");
         }
 
-
-
-
-
-
-        //// GET: Insumos/Delete/5
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var insumo = await _insumoBusiness.EliminarInsumo(guardarInsumoDto);
-        //    .FirstOrDefaultAsync(m => m.IdInsumos =6.= id);
-        //    if (insumo == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(guardarInsumoDto);
-        //}
-
         //// POST: Insumos/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int ? id) // Este Metodo Permite Eliminar el Insumo Registrado o Editado...
+        public async Task<IActionResult> Delete(int ? id) // Este Metodo Permite Eliminar el Insumo Registrado o Editado...
         {
             try
             {
@@ -186,11 +166,3 @@ namespace MundiUtil.WEB.Controllers
                 return RedirectToAction("Index");
             }
         }
-
-        //private bool InsumoExists(int id)
-        //{
-        //    return _context.insumo.Any(e => e.IdInsumos == id);
-        //}  
-    }
-}
-
