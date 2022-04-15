@@ -4,10 +4,10 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Eliminar</h1>
+<h1>Eliminar Insumo</h1>
 
 <div>
-    <h4>Insumo</h4>
+
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -36,9 +36,8 @@
         </dd>
     </dl>
     
-    <form method="post" asp-action="Eliminar" asp-route-id="@Model.IdInsumos">  
-        <input type="hidden" asp-for="IdInsumos" />
-        <button type="submit" class="text-danger m1-1" onclick="return confirm ('Deseas eliminar este registro?')"><i class="fa fa-trash-alt fa-lg"></i>Eliminar</button> 
-        <a class="btn btn-danger m1-1" asp-action="Index">Regresar</a>
+    <form method="post" asp-action="Delete" asp-route-id="@Model.IdInsumos">  
+        <button type="submit" class="btn btn-danger m1-1" onclick="return confirm ('Deseas eliminar este registro?')"><i class="fa fa-trash-alt fa-lg"></i>Eliminar</button> 
+        <a asp-action="Index"><i class="fas fa-undo-alt"></i></a>
     </form>
 </div>
